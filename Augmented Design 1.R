@@ -101,7 +101,8 @@ SE2 <- sqrt(av2$`Mean Sq`[2]*(1+(1/3)))
 SEV2 <- sqrt( 2.9*1.333333)
 
 
-
+######Sharma, J.R. (1998) Statistical and Biometrical Techniques in Plant Breeding
+######
 
 
 
