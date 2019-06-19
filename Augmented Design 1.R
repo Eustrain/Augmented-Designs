@@ -12,7 +12,7 @@ y2 <- c(258, 224, 238, 278, 347, 300, 289, 260, 220, 237, 227, 281, 311, 250,
 ####str(dat)
 #####names(dat) <- c("block","Trat","y")
 
-dat <- read.csv("dag.csv",head=T)
+dat <- read.csv("data.csv",head=T)
 head(dat)
 str(dat)
 
@@ -84,6 +84,22 @@ anv <- data.frame("."=fv,"Df"=df,"Sum sq"=ss,"Mean sq"=ms
                   ,"F value"=f,"Pr(>F)"=fval)
 
 result <- list(anv,av)
+########################################################
+####Standard Error of mean difference#######
+fm3 <- lm(y~Trat,data = dat)
+av2 <- anova(fm3)
+#################between 2 checks
+SEC <-( sqrt(2* av2$`Mean Sq`[2]))/sqrt((3))      ###nblock
+#####SEC <-( sqrt(2* av$`Mean Sq`[3]))/sqrt((nblock)) 
+########################between 2 vars
+SEV <-sqrt( (2* av2$`Mean Sq`[2]))
+########SEV <- sqrt( (2* av$`Mean Sq`[3]))
+
+################between a check
+SE2 <- sqrt(av2$`Mean Sq`[2]*(1+(1/3)))
+##################between a vars
+SEV2 <- sqrt( 2.9*1.333333)
+
 
 
 
