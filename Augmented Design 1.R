@@ -120,12 +120,12 @@ print(re)
 #240, 268, 287, 226, 395, 450)
 
 #####Example 2
-dat<- data.frame(blk,trt,y1)
-str(dat)
-names(dat) <- c("block","Trat","y")
-dat$block <- as.factor(dat$block)
-dat$Trat <- as.factor(dat$Trat)
-Aug_dis(dat$block,dat$Trat,dat$y,dat)
+#dat<- data.frame(blk,trt,y1)
+#names(dat) <- c("block","Trat","y")
+#str(dat)
+#dat$block <- as.factor(dat$block)
+#Aug_dis(dat$block,dat$Trat,dat$y,dat)
+#dat$Trat <- as.factor(dat$Trat)
 ######Sharma, J.R. (1998) Statistical and Biometrical Techniques in Plant Breeding
 ###### Aravind, J., Mukesh Sankar, S., Wankhede, D. P., and Kaur, V.
 #(2019).  augmentedRCBD: Analysis of Augmented Randomised
