@@ -104,11 +104,14 @@ Err_st <-c(SEC,SEV,SE2,SE3 )
 er <- c("between 2 checks means","between 2 Test"," two entries of the same block","Test Treatment and a Control Treatment")
 DF <- data.frame("."=er,"Std. Error of Diff"=Err_st)
 ###########################
+me_cv<- ddply(dat, c("Trat"),summarise,
+             means= mean(y))
+###########################
 result_anv <- list(anv,av)
 result_est <- list(DF)
 re<- list(result_anv,result_est)
 print(re)
-
+print(me_cv)
 
 }
 
